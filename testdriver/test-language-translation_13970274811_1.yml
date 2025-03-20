@@ -1,0 +1,53 @@
+version: 4.2.20
+session: 67dc17d379861c0eef41b224
+steps:
+  - prompt: Focus the browser window.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+  - prompt: >-
+      Switch the language from Russian to English using the Google Translate
+      popup.
+    commands:
+      - command: hover-text
+        text: English
+        description: language option in Google Translate popup
+        action: click
+  - prompt: >-
+      Switch the language from Russian to English using the Google Translate
+      popup.
+    commands:
+      - command: hover-text
+        text: Translate options
+        description: options button in Google Translate popup
+        action: click
+  - prompt: >-
+      Switch the language from Russian to English using the Google Translate
+      popup.
+    commands:
+      - command: hover-text
+        text: Choose another language
+        description: option to select a different language in the Google Translate popup
+        action: click
+  - prompt: >-
+      Switch the language from Russian to English using the Google Translate
+      popup.
+    commands:
+      - command: hover-text
+        text: Translate
+        description: translate button in Google Translate popup
+        action: click
+  - prompt: Assert that the page content is translated into English.
+    commands:
+      - command: assert
+        expect: Loans for business is visible on the page
+  - prompt: Switch back to Russian.
+    commands:
+      - command: hover-text
+        text: Russian
+        description: language option in Google Translate popup
+        action: click
+  - prompt: Assert that the page content is translated back into Russian.
+    commands:
+      - command: assert
+        expect: Кредиты для бизнеса is visible on the page

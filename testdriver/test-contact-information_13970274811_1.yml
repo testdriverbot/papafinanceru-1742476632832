@@ -1,0 +1,23 @@
+version: 4.2.20
+session: 67dc17da559da55d39a32121
+steps:
+  - prompt: Focus the browser window.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+  - prompt: Locate the phone number on the page.
+    commands:
+      - command: hover-text
+        text: 8-925-461-83-04
+        description: phone number in the top right corner
+        action: hover
+  - prompt: Assert that the phone number is displayed correctly.
+    commands:
+      - command: assert
+        expect: the phone number 8-925-461-83-04 is visible on the page
+  - prompt: Click on the phone number.
+    commands:
+      - command: hover-text
+        text: 8-925-461-83-04
+        description: phone number in the top right corner
+        action: click

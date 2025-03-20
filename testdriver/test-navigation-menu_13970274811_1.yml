@@ -1,0 +1,23 @@
+version: 4.2.20
+session: 67dc17de559da55d39a32123
+steps:
+  - prompt: Click on the “Кредиты” navigation link.
+    commands:
+      - command: hover-text
+        text: Кредиты
+        description: navigation link in the top menu
+        action: click
+  - prompt: Assert that the correct page or section is displayed.
+    commands:
+      - command: assert
+        expect: Кредиты для бизнеса is visible on the page
+  - prompt: Assert that the correct page or section is displayed.
+    commands:
+      - command: assert
+        expect: the page displays "Кредиты для бизнеса"
+  - prompt: Click on the “Компания” navigation link.
+    commands:
+      - command: hover-text
+        text: Компания
+        description: navigation link in the top menu
+        action: click
